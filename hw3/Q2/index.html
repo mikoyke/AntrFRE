@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" />
+    <script async src="index.js"></script>
+  </head>
+  <body>
+    <h2>Filterable Table</h2>
+    <label for="regionFilter">Region Filter</label>
+    <select id="regionFilter">
+      <option value="all">all</option>
+    </select>
+
+    <label for="modelFilter">Model Filter</label>
+    <select id="modelFilter">
+      <option value="all">all</option>
+    </select>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Region</th>
+          <th>Model</th>
+          <th>Sales</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </body>
+</html>
