@@ -1,0 +1,49 @@
+1.Git clone projectPath:copies a Git repository from a remote location (projectPath) to local machine.  It creates a local copy of the entire repository, including its entire history.
+
+2.Git pull -> fetches changes from a remote repository and merges them into current local branch. 
+
+3.Git checkout [branchName] -> This command switches the working directory to the specified branch ([branchName]).  Your local changes will be temporarily stashed or discarded if they haven't been committed.  If the branch doesn't exist locally, an error will occur.
+
+4.Git branch [branchName] -> creates a new branch named [branchName], but it doesn't switch to it. 
+
+5.Git checkout -b [branchName] -> creates a new branch named [branchName] and immediately switches to it. 
+
+6.Git branch: lists all local branches, marking the currently active branch with an asterisk (*).
+
+7.Git add .
+  This command stages all changes in your working directory for the next commit.  The `.` is a wildcard representing all files.
+
+8.Git commit:
+  This command saves the staged changes to your local repository with a commit message.  You'll be prompted to write a descriptive message explaining the changes.  
+
+9.Git log:
+  Shows the commit history of your branch.  You Can see a list of commits, their authors, timestamps, and commit messages.
+
+10.Git push:
+  Uploads the local commits to a remote repository.  
+
+11.Git merge:
+  This command integrates changes from one branch into another.  
+
+12. Git reset vs. Git revert:
+
+  Both commands undo changes, but they do it differently:
+
+  * git reset: moves the branch pointer to a previous commit, essentially discarding subsequent commits.  This rewrites history, which can be problematic in shared repositories.  Use with caution.
+
+  *  git revert: creates a new commit that undoes the changes introduced by a specific commit.  This preserves the history and is generally safer for shared repositories.
+
+13. Git merge vs. Git rebase:
+
+  Both commands integrate changes from one branch into another, but they achieve this differently:
+
+  *  git merge: creates a new merge commit in the target branch, preserving the complete history of both branches.
+
+  *   git rebase: rewrites the history of the source branch by applying its commits on top of the target branch. This results in a linear history, which can be cleaner but should be avoided on shared branches to prevent confusion.
+
+14. Git pull vs. Git fetch:
+
+*  git fetch: downloads commits, files, and refs from a remote repository without integrating them into your local branches.  It updates your local repository's knowledge of the remote branch but doesn't change your working directory.
+
+*   git pull: is a shortcut for `git fetch` followed by `git merge`.  It downloads changes and immediately merges them into your current local branch.
+ 
